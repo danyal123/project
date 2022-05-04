@@ -29,7 +29,7 @@ jobs:
         pip install -r requirements.txt
     - name: Activate venv
       run: |
-        .venv\Scripts\activate.bat
+        .venv/Scripts/activate.bat
     - name: Run Tests
       run: |
         python manage.py test
