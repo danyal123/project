@@ -21,15 +21,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Create Dependencies List
+      - name: Activate venv
       run: |
-        pip freeze > requirements.txt
+        source .venv/Scripts/activate.bat
     - name: Install Dependencies
       run: |
         pip install -r requirements.txt
-    - name: Activate venv
-      run: |
-        source .venv/Scripts/activate.bat
     - name: Run Tests
       run: |
         python manage.py test
