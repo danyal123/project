@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        cd Drinks ; python manage.py test
+        cd Drinks_project ; python manage.py test
